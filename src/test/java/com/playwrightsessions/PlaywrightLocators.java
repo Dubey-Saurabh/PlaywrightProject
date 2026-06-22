@@ -10,7 +10,7 @@ public class PlaywrightLocators {
     public static void main(String[] args) {
 
         Playwright playwright = Playwright.create();
-        Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        Browser browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
 
         BrowserContext browserContext1 = browser.newContext();
         Page p1 = browserContext1.newPage();
