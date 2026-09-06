@@ -15,15 +15,23 @@ public class PlaywrightLocators {
         BrowserContext browserContext1 = browser.newContext();
         Page p1 = browserContext1.newPage();
 
-/*        Single Element
+/*        p1.navigate("https://www.instagram.com/");
+        Locator usernameField = p1.locator("text=Mobile number, username or email");
+        usernameField.hover();
+        usernameField.click();*/
+
+/*      Single Element
         p1.navigate("https://www.instagram.com/");
         p1.locator("text=Mobile number, username or email").click();*/
 
-/*        MultipleLocators
+/*      MultipleLocators
         p1.navigate("https://academy.naveenautomationlabs.com/");
         Locator LoginBtn = p1.locator("text=Login");
         LoginBtn.count();
-        LoginBtn.first().click();*/
+        LoginBtn.first().click();
+        LoginBtn.last().click();*/
+
+
 
         p1.navigate("https://history.state.gov/countries/all");
         Locator listOfCountries = p1.locator("//*[@class='col-md-6']/div[1]/ul/li/a");
